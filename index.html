@@ -35,20 +35,25 @@
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
-        apiKey: "AIzaSyC3mUyukLakUS9AkBPYkq2vU038KSGDo9A",
-        authDomain: "placement-website-bphc.firebaseapp.com",
-        projectId: "placement-website-bphc",
-        storageBucket: "placement-website-bphc.appspot.com",
-        messagingSenderId: "422610264778",
-        appId: "1:422610264778:web:67c4a187d59bec471d0a33",
-        measurementId: "G-C1HNY5JKPE"
+            apiKey: "AIzaSyC3mUyukLakUS9AkBPYkq2vU038KSGDo9A",
+            authDomain: "placement-website-bphc.firebaseapp.com",
+            projectId: "placement-website-bphc",
+            storageBucket: "placement-website-bphc.appspot.com",
+            messagingSenderId: "422610264778",
+            appId: "1:422610264778:web:67c4a187d59bec471d0a33",
+            measurementId: "G-C1HNY5JKPE"
         };
     
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+
+        import { logEvent } from "firebase/analytics";
+
+        // const analytics = getAnalytics();
+        logEvent(analytics, 'notification_received');
     </script>
-    
+
     <script src="./Placements Overview_files/cse_element__en.js" type="text/javascript"></script>
     <link type="text/css" rel="stylesheet" href="./Placements Overview_files/default+en.css">
     <link type="text/css" rel="stylesheet" href="./Placements Overview_files/default.css">
